@@ -2,7 +2,7 @@ That the Raku Programming Language supports the term τ (aka [`tau` https://docs
 
 ## NEXT ENTRY
 
-That in the Raku Programming Language you can create [character classes https://docs.raku.org/language/regexes#index-entry-regex_%3C[_]%3E-regex_%3C-[_]%3E-Enumerated_character_classes_and_ranges] that exclude certain characters? For instance, the character class `<[\d]-[7]>` would accept all numeric values, except 7. In natural language: create a character class by starting with `<[` consisting of all numeric values `\d]` except a characters class `-[` consisting of 7, ending the character class with `]>` .
+That in the Raku Programming Language you can create [character classes](https://docs.raku.org/language/regexes#index-entry-regex_%3C[_]%3E-regex_%3C-[_]%3E-Enumerated_character_classes_and_ranges) that exclude certain characters? For instance, the character class `<[\d]-[7]>` would accept all numeric values, except 7. In natural language: create a character class by starting with `<[` consisting of all numeric values `\d]` except a characters class `-[` consisting of 7, ending the character class with `]>` .
 
 ## NEXT ENTRY
 
