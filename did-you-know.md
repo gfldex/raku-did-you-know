@@ -229,18 +229,18 @@ Of course, you could also do `@a = @a >>/>> 2`, but that feels like you’re rep
 
 ## NEXT ENTRY
 
-# You can use the method `.none` (and friends) of `Any` in a method call chain?
+You can use the method `.none` (and friends) of `Any` in a method call chain?
 
     my \fib = 1, 1, * + * … ∞;
     say so fib[^10].none.is-prime;
     say so fib[^10].any.is-prime;
     say so fib[5..9].one.is-prime;
 
-# A `Junction` is a parallel value that wants to collaps into a single `Bool`. Any method call to a definite `Junction` will be forwarded to its members, coerced to `Bool` and collapsed with the `Junction`-type. The above `any`-form is equivalent to:
+A `Junction` is a parallel value that wants to collaps into a single `Bool`. Any method call to a definite `Junction` will be forwarded to its members, coerced to `Bool` and collapsed with the `Junction`-type. The above `any`-form is equivalent to:
 
     say fib[^10].map(*.is-prime).reduce(&[||]);
 
-# [`Junctions` https://docs.raku.org/type/Junction] come in many forms and can make your code quite neat.
+[`Junctions`](https://docs.raku.org/type/Junction) come in many forms and can make your code quite neat.
 
 ## NEXT ENTRY
 
