@@ -271,12 +271,10 @@ A `Slip` is a `List` that automatically flattens into an outer List (or other li
 
 ## NEXT ENTRY
 
-That you can spy one a chain of method calls when hunting a bug?
+That you can spy on a chain of method calls when hunting a bug?
 
     (^10).grep(* %% 2).&{ $*ERR.say($_); $_ }.map(* ** 2).say;
 
 This is also useful, if you need the output of more then one method-call in the same object.
 
     (1/10).&{ .numerator, .denominator }.say;
-
-## NEXT ENTRY
