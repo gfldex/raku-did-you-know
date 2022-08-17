@@ -1,4 +1,4 @@
-That the Raku Programming Language supports the term τ (aka [`tau` https://docs.raku.org/routine/tau]) as the ratio between the circumference and the radius of a circle? Just as it supports the term π (aka [`pi` https://docs.raku.org/routine/pi]) as the ratio between the circumference and the diameter of a circle?
+That the Raku Programming Language supports the term τ (aka [`tau`](https://docs.raku.org/routine/tau)) as the ratio between the circumference and the radius of a circle? Just as it supports the term π (aka [`pi`](https://docs.raku.org/routine/pi)) as the ratio between the circumference and the diameter of a circle?
 
 ## NEXT ENTRY
 
