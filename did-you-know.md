@@ -259,13 +259,13 @@ This looks at the `raw` arguments (as available in `@*ARGS`) and changes any arg
 
 That when you’re using a `map`, you can return more than one value from the `Callable` block?
 
-$ say (^5).map({ $_, $_ + 1 })
-# ((0 1) (1 2) (2 3) (3 4) (4 5))
+    $ say (^5).map({ $_, $_ + 1 })
+    # ((0 1) (1 2) (2 3) (3 4) (4 5))
 
 Well, actually in this case, it’s still a single value, which happens to be a `List`. However, you `can` really return multiple values, as long as you put them in a `Slip`.
 
-$ say (^5).map({ ($_, $_ + 1).Slip })
-# (0 1 1 2 2 3 3 4 4 5)
+    $ say (^5).map({ ($_, $_ + 1).Slip })
+    # (0 1 1 2 2 3 3 4 4 5)
 
 A `Slip` is a `List` that automatically flattens into an outer List (or other list-like container or iterable). You can also use the prefix pipe to create a `Slip`. In the above example, that would be: `|($_, $_ + 1)`.
 
@@ -278,3 +278,4 @@ That you can spy on a chain of method calls when hunting a bug?
 This is also useful, if you need the output of more then one method-call in the same object.
 
     (1/10).&{ .numerator, .denominator }.say;
+
