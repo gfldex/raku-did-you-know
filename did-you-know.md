@@ -279,3 +279,19 @@ This is also useful, if you need the output of more then one method-call in the 
 
     (1/10).&{ .numerator, .denominator }.say;
 
+## NEXT ENTRY
+
+That often there is no time to come up with a container name? In Raku many elements can be anonymous, including variables.
+
+    react {
+        whenever Supply.interval(1) {
+            done if ++$ ≥ 5;
+    
+            once { say 'thinking'; next }
+            say 'still thinking';
+        }
+        CLOSE { say 'done thinking'; }
+    }
+
+
+Containers that don't got a symbol-name can't be used in the wrong spot. Ideal for one-off counter and placeholders in [destructuring assignment](https://docs.raku.org/language/variables#index-entry-destructuring_assignment) and [`Signature`s](https://docs.raku.org/type/Signature#Signature_literals).
