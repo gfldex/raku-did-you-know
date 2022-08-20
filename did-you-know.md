@@ -295,3 +295,21 @@ That often there is no time to come up with a container name? In Raku many eleme
 
 
 Containers that don't got a symbol-name can't be used in the wrong spot. Ideal for one-off counter and placeholders in [destructuring assignment](https://docs.raku.org/language/variables#index-entry-destructuring_assignment) and [`Signature`s](https://docs.raku.org/type/Signature#Signature_literals).
+
+## NEXT ENTRY
+
+That you can easily share raku data items with PHP code.
+
+```
+use Inline::Perl5;
+use PHP::Serialization:from<Perl5> <serialize unserialize>;
+
+my %a = %(a => 1, b => 2);          #{a => 1, b => 2}
+
+my $php = serialize(%a);            #a:2:{s:1:"b";i:2;s:1:"a";i:1;}
+
+my %b = unserialize($php);          #{a => 1, b => 2}
+```
+
+Inline::Perl5 is a simple way to access the vast library of Perl modules on [CPAN](https://www.cpan.org) (currently there are 208,288 modules listed).
+
