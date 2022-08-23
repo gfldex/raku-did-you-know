@@ -296,7 +296,7 @@ That often there is no time to come up with a container name? In Raku many eleme
 
 Containers that don't got a symbol-name can't be used in the wrong spot. Ideal for one-off counter and placeholders in [destructuring assignment](https://docs.raku.org/language/variables#index-entry-destructuring_assignment) and [`Signature`s](https://docs.raku.org/type/Signature#Signature_literals).
 
-## NEXT ENTRY
+## PUBLISHED ENTRY (rakuweekly 2022-08-23)
 
 That you can easily share raku data items with PHP code.
 
