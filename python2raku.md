@@ -15,3 +15,28 @@ Raku uses the right operators instead.
 ```
 
 But all of them also have ascii alias, as shown in the documentation… but I usually just use ctrl+k on vim…
+
+## NEW ENTRY
+
+Remove punctuation in Python.
+
+```
+use string
+use dict
+
+from string import punctuation
+sentence = "Do we agree, that python is clean?"
+sentence.translate(
+	str.maketrans(
+		dict.fromkeys(punctuation)
+	)
+)
+# 'Do we agree that python is clean'
+```
+
+Raku knows if a character is a punctuation by it’s Unicode properties, so you don’t need a module for that:
+
+```
+say "Hey, how are you doing?".subst(/ <punct> /, :g);
+# 'Hey how are you doing'
+```
