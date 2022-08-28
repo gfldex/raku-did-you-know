@@ -255,7 +255,7 @@ However, many people are used to be able to specify `--no-foo` as a way to indic
 
 This looks at the `raw` arguments (as available in `@*ARGS`) and changes any arguments starting with `--no-` to `--/` (which is an accepted format in Raku’s standard way of interpreting command line arguments). After that, it’s just as if users of your script typed `--/foo` instead of `--no-foo`.
 
-## NEXT ENTRY
+## PUBLISHED ENTRY (rakuweekly 2022-08-08)
 
 That when you’re using a `map`, you can return more than one value from the `Callable` block?
 
