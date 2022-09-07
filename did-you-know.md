@@ -2,6 +2,33 @@ That the Raku Programming Language supports the term τ (aka [`tau`](https://doc
 
 ## NEXT ENTRY
 
+Raku offers convenient control flow [with / without](https://docs.raku.org/language/control#index-entry-control_flow_without) syntactic sugar that performs some logic only if operand is or is not defined. Probably the most common use case is "dodging" undefined value warnings without repeating operand name:
+
+    my $middle-name = get-middle-name( );
+    $middle-name .= tclc() if defined $middle-name;
+
+Can be simply written as:
+
+    my $middle-name = .tclc() with get-middle-name( );
+    
+But did you know that `without` actually also binds operand container allowing its value to be set in block?
+
+    my %order;
+    without %order{ 'processed-at' } {
+        process-order( %order );
+        $_ = DateTime.now;              # yes, you can set it here
+    };
+    say %order{ 'processed-at' }.year;  # will print current year
+
+Not only it prevents repeating hash key name in logic but at the same time is less obfuscated than other commonly used pattern:
+
+    %order{ 'processed-at' } //= do {
+        process-order( %order );
+        DateTime.now;
+    };
+
+## NEXT ENTRY
+
 That in the Raku Programming Language you can create [character classes](https://docs.raku.org/language/regexes#index-entry-regex_%3C[_]%3E-regex_%3C-[_]%3E-Enumerated_character_classes_and_ranges) that exclude certain characters? For instance, the character class `<[\d]-[7]>` would accept all numeric values, except 7. In natural language: create a character class by starting with `<[` consisting of all numeric values `\d]` except a characters class `-[` consisting of 7, ending the character class with `]>` .
 
 ## NEXT ENTRY
